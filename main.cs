@@ -1,5 +1,3 @@
-# c--url-shortener
-
 public class UrlShortenerService : IUrlShortenerService
 {
     private static readonly char[] _chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
@@ -10,4 +8,3 @@ public class UrlShortenerService : IUrlShortenerService
         return string.Create(5, _chars, (shortCode, charsState)
             => Random.Shared.GetItems(charsState, shortCode));
     }
-}
